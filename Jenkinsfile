@@ -1,5 +1,10 @@
 pipeline {
       agent any
+      environment {
+            //Name of the environment variable to be passed to the build script
+            env = "dev"
+      }     
+
       stages {
             stage('Init') {
                   steps {
@@ -22,5 +27,17 @@ pipeline {
                         echo "Deploying in Production Area"
                   }
             }
+            stage('Test') {
+                  steps {
+                        echo 'Testing the Sample Maven Project'
+                  }
+            }
+                  post {
+                        always {
+                              echo 'I am always run even if the build fails'
+                        }
+                  }     
+
+                         
       }
 }

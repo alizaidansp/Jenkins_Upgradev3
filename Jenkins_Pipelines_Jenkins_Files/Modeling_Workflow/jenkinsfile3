@@ -51,8 +51,13 @@ pipeline {
         }        
     }
     post{
+      
+         post {
         always {
+            cleanWs()
              echo 'Prints whether deploy happened or not, success or failure'
+
         }
+    }
     }
 }
