@@ -50,7 +50,7 @@ pipeline {
             }
         }        
     }
-    post{
+  
       
          post {
         always {
@@ -58,6 +58,6 @@ pipeline {
              echo 'Prints whether deploy happened or not, success or failure'
 
         }
-    }
+    
     }
 }
