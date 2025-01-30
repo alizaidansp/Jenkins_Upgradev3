@@ -10,19 +10,19 @@ pipeline {
                 stage('linux-arm64') {
                     steps {
                         echo "Building release ${RELEASE} for linux-arm64 with log level ${LOG_LEVEL}..."
-                        sh 'sleep 10'
+                        sh 'sleep 1'
                     }
                 }
                 stage('linux-amd64') {
                     steps {
                         echo "Building release ${RELEASE} for linux-amd64 with log level ${LOG_LEVEL}..."
-                        sh 'sleep 20'
+                        sh 'sleep 2'
                     }
                 }
                 stage('windows-amd64') {
                     steps {
                         echo "Building release ${RELEASE} for windows-amd64 with log level ${LOG_LEVEL}..."
-                        sh 'sleep 30'
+                        sh 'sleep 3'
                     }
                 }
             }
